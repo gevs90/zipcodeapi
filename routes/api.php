@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ZipcodeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('zip-codes/{zipcode}', [\App\Http\Controllers\ZipcodeController::class, 'zipcode']);
+Route::get('zip-codes/{zipcode}', [ZipcodeController::class, 'zipcode']);
